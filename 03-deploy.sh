@@ -35,7 +35,7 @@ sam build
 sam deploy \
     --force-upload\
     --stack-name $STACK_NAME\
-    --template-file template.yaml\
+    --template-file .aws-sam/build/template.yaml\
     --resolve-s3\
     --region $REGION\
     --capabilities CAPABILITY_IAM\
