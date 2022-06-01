@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  testExample
+  
+  Sample SAM Template for rescue-me-users
+
+Globals:
+  Function:
+    Timeout: 5
+Resources:
+  RegisterFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: register/
+      Handler: register
+      Runtime: go1.x
+      Architectures:
+      - x86_64
+      Tracing: Active
+      Events:
+        CatchAll:
+          Type: HttpApi
+          Properties:
+            Path: /register
+            Method: POST
+      Environment:
+        Variables:
+          DEFAULT_NAME: Default Name
+    Metadata:
+      SamResourceId: RegisterFunction

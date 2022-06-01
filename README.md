@@ -1,1 +1,1 @@
-### Rescue Me Auth
+### Rescue Me Users
