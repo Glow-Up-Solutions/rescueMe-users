@@ -26,6 +26,10 @@ Resources:
             Method: POST
       Environment:
         Variables:
-          DEFAULT_NAME: Default Name
+          DB_NAME: postgres
+          DB_HOST: 172.17.0.2
+          DB_PORT: 5432
+          DB_USER: postgres
+          DB_PASS: null
     Metadata:
       SamResourceId: RegisterFunction
